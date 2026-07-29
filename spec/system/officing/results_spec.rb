@@ -94,7 +94,8 @@ describe "Officing Results", :with_frozen_time do
       booth_assignment: poll_officer.officer_assignments.first.booth_assignment,
       date: Date.current,
       question: question_1,
-      answer: question_1.question_options.first.title,
+      option: question_1.question_options.first,
+      answer: "legacy snapshot",
       author: poll_officer.user,
       amount: 7777
     )
@@ -135,6 +136,8 @@ describe "Officing Results", :with_frozen_time do
       expect(page).to have_content("5555")
       expect(page).not_to have_content("7777")
     end
+
+    expect(partial_result.reload.answer).to be nil
 
     within("#white_results") { expect(page).to have_content("6") }
     within("#null_results")  { expect(page).to have_content("7") }
