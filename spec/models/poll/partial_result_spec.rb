@@ -15,6 +15,19 @@ describe Poll::PartialResult do
       expect(partial_result).to be_valid
     end
 
+    it "is not valid without an option when question accepts options" do
+      question = create(:poll_question, :yes_no)
+
+      expect(build(:poll_partial_result, question: question, option: nil)).not_to be_valid
+    end
+
+    it "is valid with an option for the question" do
+      question = create(:poll_question, :yes_no)
+      option = question.question_options.first
+
+      expect(build(:poll_partial_result, question: question, option: option)).to be_valid
+    end
+
     it "accepts legacy text in option partial results" do
       question = create(:poll_question)
       option = create(:poll_question_option, title: "One", question: question)
