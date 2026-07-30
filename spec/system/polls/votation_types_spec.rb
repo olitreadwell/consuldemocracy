@@ -121,7 +121,7 @@ describe "Poll Votation Type" do
 
   scenario "Maximum votes has been reached" do
     question = create(:poll_question_multiple, :abc, poll: poll, max_votes: 2)
-    option_a = question.question_options.find_by(title: "Answer A")
+    option_a = question.option_for("Answer A")
     create(:poll_answer, author: author, question: question, option: option_a)
 
     visit poll_path(poll)
@@ -152,7 +152,7 @@ describe "Poll Votation Type" do
 
   scenario "Too many answers", :no_js do
     question = create(:poll_question_multiple, :abcde, poll: poll, max_votes: 2, title: "Which are correct?")
-    option_e = question.question_options.find_by(title: "Answer E")
+    option_e = question.option_for("Answer E")
     option_e.update!(allows_custom_text: true)
 
     visit poll_path(poll)
