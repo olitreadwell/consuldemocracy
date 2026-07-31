@@ -144,4 +144,18 @@ describe Poll::Question::Option do
       end
     end
   end
+
+  describe "#allows_custom_text" do
+    it "defaults to false" do
+      option = Poll::Question::Option.new
+
+      expect(option.allows_custom_text).to be false
+    end
+
+    it "can be enabled" do
+      option = create(:poll_question_option, allows_custom_text: true)
+
+      expect(option.allows_custom_text).to be true
+    end
+  end
 end

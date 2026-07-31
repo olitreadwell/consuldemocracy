@@ -8,4 +8,10 @@ class Admin::Poll::Questions::Options::FormComponent < ApplicationComponent
     @option = option
     @url = url
   end
+
+  private
+
+    def allows_custom_text_help_id(form)
+      form.field_id(:allows_custom_text, :help)
+    end
 end

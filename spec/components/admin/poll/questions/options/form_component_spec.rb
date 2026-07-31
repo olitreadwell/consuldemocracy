@@ -12,4 +12,19 @@ describe Admin::Poll::Questions::Options::FormComponent do
     expect(page).to have_css "label", text: "Description"
     expect(page).to have_button "Save"
   end
+
+  describe "allows custom text checkbox" do
+    it "includes accessibility attributes" do
+      render_inline component
+
+      checkbox = page.find_field("Allow custom text")
+      help_id = checkbox[:"aria-describedby"]
+
+      expect(help_id).to be_present
+      expect(page).to have_css(
+        "##{help_id}",
+        text: "Allows users to write their own answer when selecting this option"
+      )
+    end
+  end
 end
