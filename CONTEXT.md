@@ -23,7 +23,7 @@
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - `2026-08-05` self-found test-coverage gap (WelcomeHelper homepage-carousel helpers) — outcome pr-opened (PR #1) — lesson: Rails helpers lacked specs; added 57-line spec.
 - `2026-08-26` test-coverage update — outcome pr-updated (PR #5).
-- `2026-09-09` self-found trivial typos (CONTRIBUTING prefered; graphql tabe + inside inside; census filled in in) — outcome pr-opened — lesson: bundle genuine EN doc typos into one glance-reviewable PR.
+- `2026-09-09` self-found trivial typos (CONTRIBUTING prefered; graphql tabe + inside inside; census filled in in) — outcome pr-opened (PR #18, fix_doc_typos) — lesson: bundle genuine EN doc typos into one glance-reviewable PR. Fork CI green except pronto (403 creating commit status: fork token lacks `statuses` write — fork artifact, passes upstream); test shard (5,1) flaked once, passed on rerun.
 
 ## Mined gaps (discovered, not yet attempted)
 - (none outstanding after this pass)
