@@ -27,3 +27,4 @@
 
 ## Mined gaps (discovered, not yet attempted)
 - (none outstanding after this pass)
+- `2026-09-08` maintainer-approved docs gap (issue #5613, "Document how to customize the help page") — outcome pr-opened (PR #19, docs/customize_help_page) — lesson: maintainer reopened #5613 and asked to include the idea in customization docs; commenter lmsalgado documented an admin-interface workaround (disable Help page feature, create custom page, add "Main Navigation Right" content block). Added a "Customizing the help page" section to docs/en + docs/es customization/views.md covering view, controller, and admin-interface approaches. Fork CI fully green after granting the fork's GITHUB_TOKEN `statuses` write (pronto 403 was a fork token artifact, now fixed at the fork level).
