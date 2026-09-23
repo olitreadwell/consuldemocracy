@@ -6,7 +6,7 @@ The core team members and the project's community adopt an inclusive Code of Con
 
 ## Reporting an issue
 
-The prefered way to report any bug is [opening an issue in the project's repo](https://github.com/consuldemocracy/consuldemocracy/issues/new).
+The preferred way to report any bug is [opening an issue in the project's repo](https://github.com/consuldemocracy/consuldemocracy/issues/new).
 
 * Try to use a descriptive and to-the-point title
 * It's a good idea to include some of these sections:

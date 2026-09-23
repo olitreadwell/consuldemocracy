@@ -15,7 +15,7 @@ en:
           password: Password
           send_email: Send reset password email
           reset_email_send: Email correctly sent.
-          reseted: Password reseted successfully
+          reseted: Password reset successfully
           random: Generate random password
           save: Save password
           show: Show password
