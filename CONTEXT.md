@@ -1,5 +1,5 @@
 # consuldemocracy/consuldemocracy context
-> refreshed 2026-09-24 | upstream default: master @ 35a43d7fe
+> refreshed 2026-09-24 | upstream default: master @ 6e9ade8ca
 
 ## Identity & policies
 - upstream: consuldemocracy/consuldemocracy, default branch `master`, primary language Ruby (Rails), bilingual EN+ES base languages (README_ES.md, CONTRIBUTING_ES.md; Crowdin manages all others). English-first: yes.
@@ -21,6 +21,7 @@
 - Docs (docs/en) are generally clean; EN spelling errors are rare. Translations are en/es base + Crowdin.
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
+- `2026-09-24` self-found dead links (docs + README) — outcome pr-opened (PR #25, fix_broken_docs_links) — lesson: three curl-verified 404s fixed to canonical 200 targets — EN communication.md referenced nonexistent consuldemocracy/docs repo (ES mirror already correct); EN+ES README accessibility badges pointed at retired w3.org/WAI/eval/Overview (Page Not Found), replaced with /WAI/test-evaluate/ (Evaluating Web Accessibility Overview). Repo-wide lychee sweep: all other candidates were false positives (403 anti-bot, TLS/connection errors). Single commit 9c9690c8e, docs-only URL swaps; fork CI runs mdl + full matrix (docs-only cannot affect tests).
 - `2026-08-05` self-found test-coverage gap (WelcomeHelper homepage-carousel helpers) — outcome pr-opened (PR #1) — lesson: Rails helpers lacked specs; added 57-line spec.
 - `2026-08-26` test-coverage update — outcome pr-updated (PR #5).
 - `2026-09-09` self-found trivial typos (CONTRIBUTING prefered; graphql tabe + inside inside; census filled in in) — outcome pr-opened (PR #18, fix_doc_typos) — lesson: bundle genuine EN doc typos into one glance-reviewable PR. Fork CI green except pronto (403 creating commit status: fork token lacks `statuses` write — fork artifact, passes upstream); test shard (5,1) flaked once, passed on rerun.
