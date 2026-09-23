@@ -136,7 +136,7 @@ Required fields to parse the response:
 - **Path for the Last Name**: Path in the response structure containing the user's Last Name.
 
   ![Response data - Path for last name is filled in with get_habita_datos_response.get_habita_datos_return.datos_habitante.item.apellido1](../../img/remote_census/response-data-path-last-name-en.png)
-- **Path for detecting a valid response**: Path in the response structure that must be filled in in valid responses.
+- **Path for detecting a valid response**: Path in the response structure that must be filled in valid responses.
 
   ![Response data - Path for valid response is filled in with get_habita_datos_response.get_habita_datos_return.datos_habitante.item](../../img/remote_census/response-data-path-valid-response-en.png)
 

@@ -8,7 +8,7 @@ en:
         instructions: Confirming the account with email %{email}
         new_password_confirmation_label: Repeat access password
         new_password_label: New access password
-        please_set_password: Please choose your new pasword (it will allow you to login with the email above)
+        please_set_password: Please choose your new password (it will allow you to login with the email above)
         submit: Confirm
         title: Confirm my account
     mailer:
