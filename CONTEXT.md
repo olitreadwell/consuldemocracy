@@ -1,5 +1,5 @@
 # consuldemocracy/consuldemocracy context
-> refreshed 2026-09-24 | upstream default: master @ 6e9ade8ca
+> refreshed 2026-09-25 | upstream default: master @ dfa6004f1
 
 ## Identity & policies
 - upstream: consuldemocracy/consuldemocracy, default branch `master`, primary language Ruby (Rails), bilingual EN+ES base languages (README_ES.md, CONTRIBUTING_ES.md; Crowdin manages all others). English-first: yes.
