@@ -1,10 +1,10 @@
 # consuldemocracy/consuldemocracy context
-> refreshed 2026-09-25 | upstream default: master @ dfa6004f1
+> refreshed 2026-10-01 | upstream default: master @ dfa6004f1
 
 ## Identity & policies
 - upstream: consuldemocracy/consuldemocracy, default branch `master`, primary language Ruby (Rails), bilingual EN+ES base languages (README_ES.md, CONTRIBUTING_ES.md; Crowdin manages all others). English-first: yes.
 - CLA/DCO: none
-- AI-assisted PR policy: allowed / unstated (no AI-disclosure requirement found; config flags bans_ai:false, ai_disclosure_required:false)
+- AI-assisted PR policy: **prohibited for outside contributions (maintainer statement)**. No policy in CONTRIBUTING/.github/README/org default, and no AI-pr label, but maintainer javierm (MEMBER) told a would-be contributor on issue #6143 (2025-11-06): "we don't accept contributions from AI-generated content". This is a "don't touch this" signal on the AI-contribution channel. Product AI (LLM features) is a separate thing and is merged. Passport currently says bans_ai:false (file-only scan); treat as banned for pipeline staged work unless Oli overrides. ai_disclosure_required:false.
 - signed commits required: no
 - PR template: .github/PULL_REQUEST_TEMPLATE (Motivation-style checklist; not .md — scan may miss it, passport says false, treat as true)
 - external tracker: github
@@ -15,7 +15,7 @@
 - i18n: edit only base languages en + es; others via Crowdin.
 
 ## Maintainer picture
-- Javi Martín (javierm), Sebastià Roig (taitus). Active, merges daily (2026-09-07 merges). Responsive.
+- Javi Martín (javierm), Sebastià Roig (taitus). Active on their own work, merges daily. Responsive to issues but **selective about outside PRs**: in the ~4 months to 2026-10-01 the only non-bot external merges are #6444/#6443 (lucialuzuriaga, 2026-07-22/23, small docs/publiccode additions); everything merged since Aug 2026 is MEMBER- or bot-authored. Treat stranger-PR merge odds as low; the AI-contribution statement (above) compounds this.
 
 ## Issue-area health
 - Docs (docs/en) are generally clean; EN spelling errors are rare. Translations are en/es base + Crowdin.
@@ -27,6 +27,7 @@
 - `2026-09-09` self-found trivial typos (CONTRIBUTING prefered; graphql tabe + inside inside; census filled in in) — outcome pr-opened (PR #18, fix_doc_typos) — lesson: bundle genuine EN doc typos into one glance-reviewable PR. Fork CI green except pronto (403 creating commit status: fork token lacks `statuses` write — fork artifact, passes upstream); test shard (5,1) flaked once, passed on rerun.
 
 - `2026-09-25` self-found trivial-fix hunt (loop-trivial scheduled) over upstream master @dfa6004f1 - outcome skipped - lesson: exhaustive whole-repo codespell + link + stale-command scan found only ONE new genuine user-facing candidate (CHANGELOG.md:2494 'hided'->'hid'). All other EN typos/links already harvested by PR #24 (17 typos) + PR #25 (3 dead links) opened the previous day; remaining hits are out-of-scope code comments, false positives, or properly-named municipal platform names. Below the 3-fix minimum -> no PR.
+- `2026-10-01` self-found gap, loop.sh scheduled over upstream master @dfa6004f1 - outcome skipped (skip-bans-ai) - lesson: the AI-contribution policy gate fires before any pick. Maintainer javierm states outside AI-generated contributions are not accepted (#6143, 2025-11-06); no maintainer-engaged open issue survives the filters besides that thread; repo-audit was NOT run because the policy gate hard-skips. Also noted: no non-bot external PR merged since 2026-07-23. Do not re-pick this repo until Oli confirms; if Oli overrides, avoid #6143.
 ## Mined gaps (discovered, not yet attempted)
 - (none outstanding after this pass)
 - `2026-09-08` maintainer-approved docs gap (issue #5613, "Document how to customize the help page") — outcome pr-opened (PR #19, docs/customize_help_page) — lesson: maintainer reopened #5613 and asked to include the idea in customization docs; commenter lmsalgado documented an admin-interface workaround (disable Help page feature, create custom page, add "Main Navigation Right" content block). Added a "Customizing the help page" section to docs/en + docs/es customization/views.md covering view, controller, and admin-interface approaches. Fork CI fully green after granting the fork's GITHUB_TOKEN `statuses` write (pronto 403 was a fork token artifact, now fixed at the fork level).
