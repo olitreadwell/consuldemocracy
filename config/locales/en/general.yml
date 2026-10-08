@@ -96,7 +96,7 @@ en:
         disable: "Recommendations for debates will stop showing if you dismiss them. You can enable them again in 'My account' page"
         actions:
           success: "Recommendations for debates are now disabled for this account"
-          error: "An error has occured. Please go to 'My account' page to manually disable recommendations for debates"
+          error: "An error has occurred. Please go to 'My account' page to manually disable recommendations for debates"
       search_form:
         button: Search
         placeholder: Search debates...
@@ -319,7 +319,7 @@ en:
       done: Done
       other: Other
     form:
-      proposal_responsible_name_note: "(individually or as representative of a collective; will not be displayed publically)"
+      proposal_responsible_name_note: "(individually or as representative of a collective; will not be displayed publicly)"
       proposal_summary_note: "(maximum 200 characters)"
       proposal_video_url_note: You may add a link to YouTube or Vimeo
       tag_category_label: "Categories"
@@ -346,7 +346,7 @@ en:
         disable: "Recommendations for proposals will stop showing if you dismiss them. You can enable them again in 'My account' page"
         actions:
           success: "Recommendations for proposals are now disabled for this account"
-          error: "An error has occured. Please go to 'My account' page to manually disable recommendations for proposals"
+          error: "An error has occurred. Please go to 'My account' page to manually disable recommendations for proposals"
       retired_proposals: Withdrawn proposals
       retired_proposals_link: "Proposals withdrawn by the author"
       selected_proposals: Selected proposals
