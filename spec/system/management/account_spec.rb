@@ -38,7 +38,7 @@ describe "Account" do
 
     click_button "Save password"
 
-    expect(page).to have_content "Password reseted successfully"
+    expect(page).to have_content "Password reset successfully"
     expect(page).to have_link "Print password", href: "javascript:window.print();"
     expect(page).to have_css "div.for-print-only", text: "new_password", visible: :hidden
 
@@ -74,7 +74,7 @@ describe "Account" do
 
     click_button "Save password"
 
-    expect(page).to have_content "Password reseted successfully"
+    expect(page).to have_content "Password reset successfully"
 
     logout
 
