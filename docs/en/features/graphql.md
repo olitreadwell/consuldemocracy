@@ -107,11 +107,11 @@ Here's an example of a `GET` request, with the query as part of the *query strin
 
 And here's an example of a `POST` request, with the query as part of the *body* and encoded as `application/json`:
 
-!["Headers" tabe in Postman, with "Content-Type" set to "application/json"](../../img/graphql/graphql-postman-post-headers.png)
+!["Headers" tab in Postman, with "Content-Type" set to "application/json"](../../img/graphql/graphql-postman-post-headers.png)
 
 The query must be located inside a valid JSON document, as the value of the `"query"` key:
 
-!["Body" tab in Postman, with the query inside inside the "query" key](../../img/graphql/graphql-postman-post-body.png)
+!["Body" tab in Postman, with the query inside the "query" key](../../img/graphql/graphql-postman-post-body.png)
 
 #### HTTP libraries
 
