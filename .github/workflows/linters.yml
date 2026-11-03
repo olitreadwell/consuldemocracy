@@ -23,10 +23,12 @@ jobs:
             run: bundle exec mdl *.md docs/
           - name: HTML Beautifier
             run: find app/ -name "*.html.erb" -exec bundle exec htmlbeautifier --lint-only --keep-blank-lines 1 -e {} +
+          - name: Herb linter
+            run: bundle exec herb lint
     name: ${{ matrix.name }}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - run: |
           git fetch --no-tags --prune origin +refs/heads/*:refs/remotes/origin/*
       - name: Setup Ruby
@@ -34,7 +36,7 @@ jobs:
         with:
           bundler-cache: true
       - name: Setup NPM
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           cache: "npm"
           node-version-file: ".node-version"

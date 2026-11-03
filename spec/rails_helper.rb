@@ -62,22 +62,6 @@ end
 
 FactoryBot.use_parent_strategy = false
 
-module Capybara
-  module DSL
-    alias_method :original_visit, :visit
-
-    def visit(url, ...)
-      original_visit(url, ...)
-
-      unless url.match?("robots.txt") || url.match?("active_storage/representations")
-        expect(page).to have_css "main", count: 1
-        expect(page).to have_css "#main", count: 1
-        expect(page).to have_css "main#main"
-      end
-    end
-  end
-end
-
 Capybara.register_driver :headless_chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new.tap do |opts|
     opts.add_argument "--headless"
@@ -86,6 +70,7 @@ Capybara.register_driver :headless_chrome do |app|
     opts.add_argument "--ignore-certificate-errors"
     opts.add_argument "--proxy-server=#{Billy.proxy.host}:#{Billy.proxy.port}"
     opts.add_argument "--proxy-bypass-list=127.0.0.1;localhost;lvh.me;*.lvh.me"
+    opts.add_argument "--disable-features=DeferRendererTasksAfterInput"
   end
 
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)

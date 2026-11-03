@@ -155,9 +155,9 @@ describe "Debates" do
     3.times  { create(:vote, votable: debate_positive, vote_flag: false) }
 
     5.times { create(:vote, votable: debate_zero, vote_flag: true) }
-    5.times  { create(:vote, votable: debate_zero, vote_flag: false) }
+    5.times { create(:vote, votable: debate_zero, vote_flag: false) }
 
-    6.times  { create(:vote, votable: debate_negative, vote_flag: false) }
+    6.times { create(:vote, votable: debate_negative, vote_flag: false) }
 
     visit debates_path
 
@@ -641,13 +641,15 @@ describe "Debates" do
       create(:debate, title: "Abcdefghi")
 
       visit debates_path
+
+      expect(page).to have_content "FEATURED"
+
       within "#search_form" do
         fill_in "search", with: "Abcdefghi"
         click_button "Search"
       end
 
-      expect(page).not_to have_css "#debates .debate-featured"
-      expect(page).not_to have_css "#featured-debates"
+      expect(page).not_to have_content "FEATURED"
     end
   end
 

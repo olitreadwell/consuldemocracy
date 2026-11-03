@@ -18,7 +18,7 @@ en:
       show:
         title: Comment
       version_chooser:
-        seeing_version: Commments for version
+        seeing_version: Comments for version
         see_text: See text draft
     draft_versions:
       changes:
@@ -103,8 +103,6 @@ en:
       share: Share
       share_comment: Comment on %{version_name} from process draft %{process_name}
     proposals:
-      form:
-        tags_label: "Categories"
       not_verified: "For vote proposals %{verify_account}."
       process_title: Collaborative legislation process
     summary:

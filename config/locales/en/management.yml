@@ -15,7 +15,7 @@ en:
           password: Password
           send_email: Send reset password email
           reset_email_send: Email correctly sent.
-          reseted: Password reseted successfully
+          reseted: Password reset successfully
           random: Generate random password
           save: Save password
           show: Show password
@@ -103,7 +103,6 @@ en:
         other: " containing the term '%{search_term}'"
     sessions:
       need_managed_user: To perform this action you must select a user
-      signed_out: Signed out successfully.
       signed_out_managed_user: User session signed out successfully.
     username_label: Username
     users:
