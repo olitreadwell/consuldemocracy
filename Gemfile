@@ -64,7 +64,7 @@ gem "terser", "~> 1.2.7"
 gem "turbolinks", "~> 5.2.1"
 gem "turnout2024", "~> 3.0.2", require: "turnout"
 gem "view_component", "~> 4.12.0"
-gem "whenever", "~> 1.1.2", require: false
+gem "whenever", "~> 1.1.3", require: false
 gem "wicked_pdf", "~> 2.8.2"
 gem "wkhtmltopdf-binary", "~> 0.12.6"
 
@@ -98,18 +98,19 @@ group :development do
   gem "capistrano3-puma", "~> 7.1.0"
   gem "erb_lint", "~> 0.9.0", require: false
   gem "faraday-retry", "~> 2.4.0", require: false
+  gem "herb", "~> 0.11.1", require: false
   gem "htmlbeautifier", "~> 1.4.3", require: false
   gem "mdl", "~> 0.18.1", require: false
   gem "pronto", "~> 0.11.5", require: false
   gem "pronto-erb_lint", "~> 0.1.6", require: false
   gem "pronto-rubocop", "~> 0.11.6", require: false
   gem "pronto-stylelint", "~> 0.11.1", require: false
-  gem "rubocop", "~> 1.86.1", require: false
-  gem "rubocop-capybara", "~> 2.22.1", require: false
+  gem "rubocop", "~> 1.91.0", require: false
+  gem "rubocop-capybara", "~> 3.0.0", require: false
   gem "rubocop-factory_bot", "~> 2.28.0", require: false
-  gem "rubocop-performance", "~> 1.26.1", require: false
-  gem "rubocop-rails", "~> 2.34.3", require: false
-  gem "rubocop-rspec", "~> 3.9.0", require: false
+  gem "rubocop-performance", "~> 1.27.0", require: false
+  gem "rubocop-rails", "~> 2.37.0", require: false
+  gem "rubocop-rspec", "~> 3.10.2", require: false
   gem "rubocop-rspec_rails", "~> 2.32.0", require: false
   gem "rvm1-capistrano3", "~> 1.4.0", require: false
   gem "web-console", "~> 4.3.0"

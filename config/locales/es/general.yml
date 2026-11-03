@@ -81,6 +81,7 @@ es:
       show_link: Ver debate
     form:
       tags_instructions: Etiqueta este debate.
+      tags_label: Etiquetas
       tags_placeholder: "Escribe las etiquetas que desees separadas por coma (',')"
     index:
       featured_debates: Destacar
@@ -579,6 +580,9 @@ es:
   polls:
     dates: "Desde el %{open_at} hasta el %{closed_at}"
     final_date: "Recuento final/Resultados"
+    questions_count:
+      one: "Esta votación tiene 1 pregunta."
+      other: "Esta votación tiene %{count} preguntas."
     form:
       vote: "Votar"
       maximum_exceeded: "has seleccionado %{given} respuestas, pero el máximo que puedes seleccionar es %{maximum}"
@@ -946,9 +950,6 @@ es:
         more:
           one: "Una etiqueta más"
           other: "%{count} etiquetas más"
-  machine_learning:
-    comments_summary: "Resumen de comentarios"
-    info_text: "Contenido generado mediante IA / Machine Learning"
   cookies_consent:
     accept_all_cookies: "Aceptar todo"
     accept_essential_cookies: "Aceptar cookies esenciales"
