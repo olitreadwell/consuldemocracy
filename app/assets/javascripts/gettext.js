@@ -14,7 +14,7 @@
       "Unregistered": "<p>Necesitas <a href='/users/sign_in'>iniciar sesión</a> o <a href='/users/sign_up'>registrarte</a> para continuar.</p>"
     },
     en: {
-      "Comments": "Coments",
+      "Comments": "Comments",
       "No comment": "No comment",
       "Cancel": "Cancel",
       "Save": "Save",
